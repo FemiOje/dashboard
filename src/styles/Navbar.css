@@ -1,0 +1,50 @@
+.main--navbar{
+    display: flex;
+    flex-direction: row;
+}
+
+.hamburger > svg{
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+.hamburger > svg:hover{
+    box-shadow: inset;
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar--items{
+    display: flex;
+    flex-direction: row;
+    margin: 0 2rem;
+}
+
+.navbar--items a{
+    color: #000000;
+    text-decoration: none;
+    transition: 200ms;
+    margin: 0 0.3rem;
+}
+.navbar--items a:hover{
+    color: #706868;
+}
+
+.search{
+    margin: auto 0;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+.user > p{
+    margin: auto 1rem;
+}
+.user *{
+    vertical-align: middle;
+    margin: 0.5rem;
+}

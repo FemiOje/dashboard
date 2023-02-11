@@ -1,0 +1,17 @@
+.sidebar{
+    background-color: #e2e2e2;
+    height: 100%;
+}
+
+.sidebar--items > div{
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.sidebar--items > div > a{
+    margin: 0 auto;
+}
+
+aside{
+    max-width: 20%;
+}
