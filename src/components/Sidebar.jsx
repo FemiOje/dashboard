@@ -2,46 +2,47 @@ import React from 'react';
 import '../styles/Sidebar.css';
 import Hamburger from '../assets/svgs/Hamburger.svg';
 import Notification from '../assets/svgs/Notification.svg';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
         <aside className="sidebar">
             <div className="sidebar--items">
                 <div>
-                    <Link to={"/dashboard"}>
+                    <NavLink to={"/home"}>
                         <button>{Hamburger}</button>
-                    </Link>
+                    </NavLink>
                 </div>
 
                 <div>
-                    <Link to={"/favorites"}>
+                    <NavLink to={"/favorites"}>
                         <button>{Notification}</button>
-                    </Link>
+                    </NavLink>
                 </div>
 
                 <div>
-                    <Link to={"/messages"}>
+                    <NavLink to={"/messages"}>
                         <button>{Hamburger}</button>
-                    </Link>
+                    </NavLink>
                 </div>
 
                 <div>
-                    <Link to={"/insights"}>
+                    <NavLink to={"/insights"}>
                         <button>{Hamburger}</button>
-                    </Link>
+                    </NavLink>
                 </div>
 
                 <div>
-                    <Link to={"/explore"}>
+                    <NavLink to={"/explore"}>
                         <button>{Hamburger}</button>
-                    </Link>
+                    </NavLink>
                 </div>
                 <div>
-                    <Link to={"/marketplace"}>
+                    <NavLink to={"/marketplace"}>
                         <button>{Hamburger}</button>
-                    </Link>
+                    </NavLink>
                 </div>
+                
             </div>
         </aside >
     )
