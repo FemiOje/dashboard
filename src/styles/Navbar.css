@@ -1,50 +1,75 @@
-.main--navbar{
+.main--navbar {
     display: flex;
     flex-direction: row;
+    box-shadow: #0000003d 0px 3px 8px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1020;
+
 }
 
-.hamburger > svg{
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar--items>* {
+        display: none;
+    }
+}
+
+.hamburger>svg {
     cursor: pointer;
     transition-duration: 200ms;
 }
-.hamburger > svg:hover{
-    box-shadow: inset;
-}
 
-.brand{
+.brand {
     display: flex;
     flex-direction: row;
 }
 
-.navbar--items{
+.navbar--items {
     display: flex;
     flex-direction: row;
-    margin: 0 2rem;
+    margin: 0 auto;
 }
 
-.navbar--items a{
+.navbar--items a {
     color: #000000;
     text-decoration: none;
     transition: 200ms;
-    margin: 0 0.3rem;
+    margin: 0 0.5rem;
 }
-.navbar--items a:hover{
+
+.navbar--items a:hover {
     color: #706868;
 }
 
-.search{
-    margin: auto 0;
+.search {
+    margin: auto;
 }
 
-.user{
+.user {
     display: flex;
     flex-direction: row;
     margin-left: auto;
 }
-.user > p{
+
+.user>p {
     margin: auto 1rem;
 }
-.user *{
+
+.user * {
     vertical-align: middle;
     margin: 0.5rem;
+}
+
+.dropdown {
+    transition: 1s ease-in-out;
 }
