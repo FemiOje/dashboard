@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Home from '../assets/svgs/Home.svg';
 import Favorites from '../assets/svgs/Favorites.svg';
 import Messages from '../assets/svgs/Messages.svg';
@@ -92,60 +93,69 @@ const Navbar = () => {
 
 
             {/* should appear from the side */}
-            <div className='dropdown duration-1000 ease-in-out'>
-                {isDropdownOpen &&
-                    <nav className="dropdown duration-1000 ease-in-out">
-                        <div className="sidenav--items">
-                            <div>
-                                <NavLink to={"/home"} onClick={toggleDropdown}>
-                                    <button>
-                                        <img src={Home} alt="home" />
-                                    </button>
-                                </NavLink>
-                            </div>
+            {isDropdownOpen &&
+                <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -10 }}
+                    transition={{ duration: 0.4 }}
+                    className='z-20 relative'
+                >
+                    <aside className='fixed z-20 bg-white h-full shadow duration-250 w-3/4'>
+                        <nav className="bg-white">
+                            <div className="sidenav--items">
+                                <div>
+                                    <NavLink to={"/home"} onClick={toggleDropdown}>
+                                        <button>
+                                            <img src={Home} alt="home" />
+                                        </button>
+                                    </NavLink>
+                                </div>
 
-                            <div>
-                                <NavLink to={"/favorites"} onClick={toggleDropdown}>
-                                    <button>
-                                        <img src={Favorites} alt="favorites" />
-                                    </button>
-                                </NavLink>
-                            </div>
+                                <div>
+                                    <NavLink to={"/favorites"} onClick={toggleDropdown}>
+                                        <button>
+                                            <img src={Favorites} alt="favorites" />
+                                        </button>
+                                    </NavLink>
+                                </div>
 
-                            <div>
-                                <NavLink to={"/messages"} onClick={toggleDropdown}>
-                                    <button>
-                                        <img src={Messages} alt="messages" />
-                                    </button>
-                                </NavLink>
-                            </div>
+                                <div>
+                                    <NavLink to={"/messages"} onClick={toggleDropdown}>
+                                        <button>
+                                            <img src={Messages} alt="messages" />
+                                        </button>
+                                    </NavLink>
+                                </div>
 
-                            <div>
-                                <NavLink to={"/insights"} onClick={toggleDropdown}>
-                                    <button>
-                                        <img src={Insights} alt="insights" />
-                                    </button>
-                                </NavLink>
-                            </div>
+                                <div>
+                                    <NavLink to={"/insights"} onClick={toggleDropdown}>
+                                        <button>
+                                            <img src={Insights} alt="insights" />
+                                        </button>
+                                    </NavLink>
+                                </div>
 
-                            <div>
-                                <NavLink to={"/explore"} onClick={toggleDropdown}>
-                                    <button>
-                                        <img src={Explore} alt="explore" />
-                                    </button>
-                                </NavLink>
-                            </div>
-                            <div>
-                                <NavLink to={"/marketplace"} onClick={toggleDropdown}>
-                                    <button>
-                                        <img src={Marketplace} alt="marketplace" />
-                                    </button>
-                                </NavLink>
-                            </div>
+                                <div>
+                                    <NavLink to={"/explore"} onClick={toggleDropdown}>
+                                        <button>
+                                            <img src={Explore} alt="explore" />
+                                        </button>
+                                    </NavLink>
+                                </div>
+                                <div>
+                                    <NavLink to={"/marketplace"} onClick={toggleDropdown}>
+                                        <button>
+                                            <img src={Marketplace} alt="marketplace" />
+                                        </button>
+                                    </NavLink>
+                                </div>
 
-                        </div>
-                    </nav>}
-            </div>
+                            </div>
+                        </nav>
+                    </aside>
+                </motion.div>
+            }
         </>
     )
 }
