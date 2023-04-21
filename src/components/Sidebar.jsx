@@ -1,9 +1,8 @@
 import React from 'react'
-import '../styles/Sidebar.css'
 
 const Sidebar = () => {
     return (
-        <div className="sidebar">
+        <div className="sidebar self-center">
             <p className=''>
                 Sidebar
             </p>

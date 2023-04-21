@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Sidenav.css'
 import Hamburger from '../assets/svgs/Hamburger.svg';
 import Home from '../assets/svgs/Home.svg';
 import Favorites from '../assets/svgs/Favorites.svg';
@@ -11,10 +10,10 @@ import { NavLink } from 'react-router-dom';
 
 const Sidenav = () => {
     return (
-        <aside className="sidenav">
+        <aside className="sidenav bg-slate-200">
             <div className="sidenav--items">
-                <div>
-                    <NavLink to={"/home"}>
+                <div className="p-1 m-auto">
+                    <NavLink className="m-auto" to={"/home"}>
                         {/* <button> */}
                             <img src={Home} alt="home" />
                             <span>Home</span>
@@ -22,8 +21,8 @@ const Sidenav = () => {
                     </NavLink>
                 </div>
 
-                <div>
-                    <NavLink to={"/favorites"}>
+                <div className="p-1 m-auto">
+                    <NavLink className="m-auto" to={"/favorites"}>
                         {/* <button> */}
                             <img src={Favorites} alt="favorites" />
                             <span>Favorites</span>
@@ -31,8 +30,8 @@ const Sidenav = () => {
                     </NavLink>
                 </div>
 
-                <div>
-                    <NavLink to={"/messages"}>
+                <div className="p-1 m-auto">
+                    <NavLink className="m-auto" to={"/messages"}>
                         {/* <button> */}
                             <img src={Messages} alt="messages" />
                             <span>Messages</span>
@@ -40,8 +39,8 @@ const Sidenav = () => {
                     </NavLink>
                 </div>
 
-                <div>
-                    <NavLink to={"/insights"}>
+                <div className="p-1 m-auto">
+                    <NavLink className="m-auto" to={"/insights"}>
                         {/* <button> */}
                             <img src={Insights} alt="insights" />
                             <span>Insights</span>
@@ -49,16 +48,16 @@ const Sidenav = () => {
                     </NavLink>
                 </div>
 
-                <div>
-                    <NavLink to={"/explore"}>
+                <div className="p-1 m-auto">
+                    <NavLink className="m-auto" to={"/explore"}>
                         {/* <button> */}
                             <img src={Explore} alt="explore" />
                             <span>Explore</span>
                         {/* </button> */}
                     </NavLink>
                 </div>
-                <div>
-                    <NavLink to={"/marketplace"}>
+                <div className="p-1 m-auto">
+                    <NavLink className="m-auto" to={"/marketplace"}>
                         {/* <button> */}
                             <img src={Marketplace} alt="marketplace" />
                             <span>Marketplace</span>
@@ -67,181 +66,6 @@ const Sidenav = () => {
                 </div>
 
             </div>
-
-
-            <div>
-                    <NavLink to={"/home"}>
-                        {/* <button> */}
-                            <img src={Home} alt="home" />
-                            <span>Home</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/favorites"}>
-                        {/* <button> */}
-                            <img src={Favorites} alt="favorites" />
-                            <span>Favorites</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/messages"}>
-                        {/* <button> */}
-                            <img src={Messages} alt="messages" />
-                            <span>Messages</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/insights"}>
-                        {/* <button> */}
-                            <img src={Insights} alt="insights" />
-                            <span>Insights</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/explore"}>
-                        {/* <button> */}
-                            <img src={Explore} alt="explore" />
-                            <span>Explore</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div><div>
-                    <NavLink to={"/home"}>
-                        {/* <button> */}
-                            <img src={Home} alt="home" />
-                            <span>Home</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/favorites"}>
-                        {/* <button> */}
-                            <img src={Favorites} alt="favorites" />
-                            <span>Favorites</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/messages"}>
-                        {/* <button> */}
-                            <img src={Messages} alt="messages" />
-                            <span>Messages</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/insights"}>
-                        {/* <button> */}
-                            <img src={Insights} alt="insights" />
-                            <span>Insights</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/explore"}>
-                        {/* <button> */}
-                            <img src={Explore} alt="explore" />
-                            <span>Explore</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div><div>
-                    <NavLink to={"/home"}>
-                        {/* <button> */}
-                            <img src={Home} alt="home" />
-                            <span>Home</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/favorites"}>
-                        {/* <button> */}
-                            <img src={Favorites} alt="favorites" />
-                            <span>Favorites</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/messages"}>
-                        {/* <button> */}
-                            <img src={Messages} alt="messages" />
-                            <span>Messages</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/insights"}>
-                        {/* <button> */}
-                            <img src={Insights} alt="insights" />
-                            <span>Insights</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/explore"}>
-                        {/* <button> */}
-                            <img src={Explore} alt="explore" />
-                            <span>Explore</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div><div>
-                    <NavLink to={"/home"}>
-                        {/* <button> */}
-                            <img src={Home} alt="home" />
-                            <span>Home</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/favorites"}>
-                        {/* <button> */}
-                            <img src={Favorites} alt="favorites" />
-                            <span>Favorites</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/messages"}>
-                        {/* <button> */}
-                            <img src={Messages} alt="messages" />
-                            <span>Messages</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/insights"}>
-                        {/* <button> */}
-                            <img src={Insights} alt="insights" />
-                            <span>Insights</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
-
-                <div>
-                    <NavLink to={"/explore"}>
-                        {/* <button> */}
-                            <img src={Explore} alt="explore" />
-                            <span>Explore</span>
-                        {/* </button> */}
-                    </NavLink>
-                </div>
         </aside >
     )
 }
