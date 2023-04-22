@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sidebar = () => {
     return (
-        <div className="sidebar self-center h-screen border">
+        <div className="sidebar bg-slate-100 self-center h-screen border">
             <p className=''>
                 Sidebar
             </p>

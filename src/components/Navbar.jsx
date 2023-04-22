@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='sticky top-0 bg-white w-full z-50 flex flex-row shadow-md p-2'>
+            <nav className='sticky top-0 w-full z-50 flex flex-row shadow-md p-2'>
                 <div className="brand flex flex-row">
                     <div className='hamburger block md:hidden'>
                         {isDropdownOpen ?
@@ -79,14 +79,18 @@ const Navbar = () => {
 
 
                 <div className="search m-auto">
-                    <input type="search" name="search" id="search" />
-                    <button>Search</button>
+                    <input 
+                    type="search" 
+                    className='border rounded-full p-1'
+                    name="search" 
+                    id="search" 
+                    placeholder='Search'/>
                 </div>
 
                 <div className="flex flex-row ml-auto space-x-2">
+                    <button className='align-middle rounded-full bg-blue-300 py-2 px-4 duration-300 hover:bg-blue-500 hover:shadow-outline'>C</button>
                     <p className='mx-1 my-auto align-middle'>Clayton Santos</p>
-                    <button className='align-middle rounded-full bg-blue-300 py-2 px-4 duration-300 hover:bg-blue-500 hover:shadow-outline'>P</button>
-                    <button className='align-middle rounded-full bg-red-200  py-2 px-4 duration-300 hover:bg-red-500 hover:shadow-outline'>S</button>
+                    {/* <button className='align-middle rounded-full bg-red-200  py-2 px-4 duration-300 hover:bg-red-500 hover:shadow-outline'>S</button> */}
                 </div>
             </nav>
 

@@ -7,7 +7,7 @@ import { CiShop } from 'react-icons/ci';
 
 const Sidenav = () => {
     return (
-        <aside className="sidenav relative flex flex-col h-screen bg-gray-100">
+        <aside className="sidenav bg-slate-100 relative flex flex-col h-screen bg-white border-r border-gray-100">
             <div className="sidenav--items">
                 <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
                     <NavLink className="flex" to={"/home"}>
