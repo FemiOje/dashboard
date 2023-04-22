@@ -7,9 +7,11 @@ import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <div className="app">
-      <Navbar />
-      
-      <div className="layout">
+      <div className="navbar">
+        <Navbar />
+      </div>
+
+      <div className="layout relative">
         <div className="sidenav">
           <Sidenav />
         </div>

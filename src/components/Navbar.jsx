@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='main--navbar flex flex-row shadow-md relative z-20'>
+            <nav className='sticky top-0 bg-white w-full z-50 flex flex-row shadow-md p-2'>
                 <div className="brand flex flex-row">
                     <div className='hamburger block md:hidden'>
                         {isDropdownOpen ?
@@ -44,7 +44,7 @@ const Navbar = () => {
                                 </svg>)}
                     </div>
 
-                    <span className="brand--name">
+                    <span className="brand--name self-center">
                         <h3>Constructor</h3>
                     </span>
                 </div>
@@ -83,11 +83,10 @@ const Navbar = () => {
                     <button>Search</button>
                 </div>
 
-                <div className="user flex flex-row ml-auto">
+                <div className="flex flex-row ml-auto space-x-2">
                     <p className='mx-1 my-auto align-middle'>Clayton Santos</p>
-                    <button className='align-middle m-2'>One</button>
-                    <button className='align-middle m-2'>Two</button>
-
+                    <button className='align-middle rounded-full bg-blue-300 py-2 px-4 duration-300 hover:bg-blue-500 hover:shadow-outline'>P</button>
+                    <button className='align-middle rounded-full bg-red-200  py-2 px-4 duration-300 hover:bg-red-500 hover:shadow-outline'>S</button>
                 </div>
             </nav>
 

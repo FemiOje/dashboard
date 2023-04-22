@@ -1,67 +1,52 @@
 import React from 'react';
-import Hamburger from '../assets/svgs/Hamburger.svg';
-import Home from '../assets/svgs/Home.svg';
-import Favorites from '../assets/svgs/Favorites.svg';
-import Messages from '../assets/svgs/Messages.svg';
-import Insights from '../assets/svgs/Insights.svg';
-import Explore from '../assets/svgs/Explore.svg';
-import Marketplace from '../assets/svgs/Marketplace.svg';
 import { NavLink } from 'react-router-dom';
+import { MdOutlineFavorite, MdInsights, MdTravelExplore } from 'react-icons/md';
+import { RxHome } from 'react-icons/rx';
+import { TbMessages } from 'react-icons/tb';
+import { CiShop } from 'react-icons/ci';
 
 const Sidenav = () => {
     return (
-        <aside className="sidenav bg-slate-200">
+        <aside className="sidenav relative flex flex-col h-screen bg-gray-100">
             <div className="sidenav--items">
-                <div className="p-1 m-auto">
-                    <NavLink className="m-auto" to={"/home"}>
-                        {/* <button> */}
-                            <img src={Home} alt="home" />
-                            <span>Home</span>
-                        {/* </button> */}
+                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                    <NavLink className="flex" to={"/home"}>
+                            <RxHome className='self-center mx-1'/>
+                            <p>Home</p>
                     </NavLink>
                 </div>
 
-                <div className="p-1 m-auto">
-                    <NavLink className="m-auto" to={"/favorites"}>
-                        {/* <button> */}
-                            <img src={Favorites} alt="favorites" />
-                            <span>Favorites</span>
-                        {/* </button> */}
+                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                    <NavLink className="flex" to={"/favorites"}>
+                        <MdOutlineFavorite className='self-center mx-1' />
+                        <p>Favorites</p>
                     </NavLink>
                 </div>
 
-                <div className="p-1 m-auto">
-                    <NavLink className="m-auto" to={"/messages"}>
-                        {/* <button> */}
-                            <img src={Messages} alt="messages" />
-                            <span>Messages</span>
-                        {/* </button> */}
+                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                    <NavLink className="flex" to={"/messages"}>
+                        <TbMessages className='self-center mx-1'/>
+                        <p>Messages</p>
                     </NavLink>
                 </div>
 
-                <div className="p-1 m-auto">
-                    <NavLink className="m-auto" to={"/insights"}>
-                        {/* <button> */}
-                            <img src={Insights} alt="insights" />
-                            <span>Insights</span>
-                        {/* </button> */}
+                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                    <NavLink className="flex" to={"/insights"}>
+                        <MdInsights className='self-center mx-1'/>
+                        <p>Insights</p>
                     </NavLink>
                 </div>
 
-                <div className="p-1 m-auto">
-                    <NavLink className="m-auto" to={"/explore"}>
-                        {/* <button> */}
-                            <img src={Explore} alt="explore" />
-                            <span>Explore</span>
-                        {/* </button> */}
+                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                    <NavLink className="flex" to={"/explore"}>
+                        <MdTravelExplore className='self-center mx-1'/>
+                        <p>Explore</p>
                     </NavLink>
                 </div>
-                <div className="p-1 m-auto">
-                    <NavLink className="m-auto" to={"/marketplace"}>
-                        {/* <button> */}
-                            <img src={Marketplace} alt="marketplace" />
-                            <span>Marketplace</span>
-                        {/* </button> */}
+                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                    <NavLink className="flex" to={"/marketplace"}>
+                        <CiShop className='self-center mx-1'/>
+                        <p>Marketplace</p>
                     </NavLink>
                 </div>
 
