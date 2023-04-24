@@ -7,48 +7,49 @@ import { CiShop } from 'react-icons/ci';
 
 const Sidenav = () => {
     return (
-        <aside className="sidenav bg-slate-100 relative flex flex-col h-screen bg-white border-r border-gray-100">
-            <div className="sidenav--items">
-                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                    <NavLink className="flex" to={"/home"}>
-                            <RxHome className='self-center mx-1'/>
-                            <p>Home</p>
-                    </NavLink>
-                </div>
+        <aside className="sidenav bg-slate-100 relative flex flex-col bg-white border-r border-gray-100">
+            <div className="sidenav-items text-sm font-medium">
+                <NavLink to={"/home"}>
+                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                        <RxHome className='self-center mr-6' />
+                        <p>Home</p>
+                    </div>
+                </NavLink>
 
-                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                    <NavLink className="flex" to={"/favorites"}>
-                        <MdOutlineFavorite className='self-center mx-1' />
+                <NavLink to={"/favorites"}>
+                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                        <MdOutlineFavorite className='self-center mr-6' />
                         <p>Favorites</p>
-                    </NavLink>
-                </div>
+                    </div>
+                </NavLink>
 
-                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                    <NavLink className="flex" to={"/messages"}>
-                        <TbMessages className='self-center mx-1'/>
+                <NavLink to={"/messages"}>
+                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                        <TbMessages className='self-center mr-6' />
                         <p>Messages</p>
-                    </NavLink>
-                </div>
+                    </div>
+                </NavLink>
 
-                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                    <NavLink className="flex" to={"/insights"}>
-                        <MdInsights className='self-center mx-1'/>
+                <NavLink to={"/insights"}>
+                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                        <MdInsights className='self-center mr-6' />
                         <p>Insights</p>
-                    </NavLink>
-                </div>
+                    </div>
+                </NavLink>
 
-                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                    <NavLink className="flex" to={"/explore"}>
-                        <MdTravelExplore className='self-center mx-1'/>
+                <NavLink to={"/explore"}>
+                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                        <MdTravelExplore className='self-center mr-6' />
                         <p>Explore</p>
-                    </NavLink>
-                </div>
-                <div className="p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                    <NavLink className="flex" to={"/marketplace"}>
-                        <CiShop className='self-center mx-1'/>
+                    </div>
+                </NavLink>
+
+                <NavLink to={"/marketplace"}>
+                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                        <CiShop className='self-center mr-6' />
                         <p>Marketplace</p>
-                    </NavLink>
-                </div>
+                    </div>
+                </NavLink>
 
             </div>
         </aside >

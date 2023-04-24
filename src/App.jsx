@@ -6,21 +6,21 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="app">
-      <div className="navbar">
+    <div className="app relative">
+      <div className="navbar sticky top-0 z-40 w-full">
         <Navbar />
       </div>
 
-      <div className="layout relative">
-        <div className="sidenav">
+      <div className="layout relative flex">
+        <div className="sidenav md:w-1/5 md:h-full md:sticky md:top-[3.5rem]">
           <Sidenav />
         </div>
 
-        <div className="outlet">
+        <div className="w-1/1 md:w-4/5 lg:w-3/5 outlet">
           <Outlet />
         </div>
 
-        <div className="sidebar">
+        <div className="sidebar md:w-1/5 md:h-full md:fixed md:right-0">
           <Sidebar />
         </div>
       </div>
