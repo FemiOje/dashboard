@@ -313,8 +313,8 @@ const Home = () => {
             <p className="text-lg text-white py-2">Apple iPhone</p>
             <p className="text-lg text-white py-2">$568</p>
           </div>
-          <div className="messenger bg-blue-500 rounded p-4">
 
+          <div className="messenger bg-blue-500 rounded p-4">
             <div className='flex flex-col text-white'>
               <Doughnut data={doughnutData} />
               <p className='text-center'>35%</p>
