@@ -101,7 +101,7 @@ const Favorites = () => {
   ];
 
   return (
-    <div className='favorites w-[100%] min-h-screen bg-slate-100 '>
+    <div className='favorites min-h-screen bg-slate-100'>
       <div className='top md:grid md:grid-cols-2 md:gap-2'>
         <div className="small-cards md:grid md:grid-rows-2 m-2 md:grid-cols-2 md:gap-2">
           <div className='group bg-white cursor-pointer shadow-md rounded my-1 p-4 transition duration-400 md:my-0 md:row-start-1 md:row-end-2 md:col-start-1 md:col-end-2 hover:bg-purple-600 hover:text-white'>
@@ -176,7 +176,7 @@ const Favorites = () => {
       <div className='bottom'>
         <div className="employee-summary-table bg-white m-2 p-4 rounded">
           <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 700 }} aria-label="customized table">
+            <Table sx={{ minWidth: 700 }} aria-label="customized table" className='overflow-x-scroll'>
               <TableHead>
                 <TableRow>
                   <StyledTableCell>Dessert (100g serving)</StyledTableCell>

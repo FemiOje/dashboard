@@ -16,11 +16,11 @@ function App() {
           <Sidenav />
         </div>
 
-        <div className="w-1/1 md:w-4/5 lg:w-3/5 p-0 m-0 outlet">
+        <div className="w-screen md:w-4/5 lg:w-3/5 p-0 m-0 outlet">
           <Outlet />
         </div>
 
-        <div className="sidebar md:w-1/5 md:h-full md:fixed md:right-0">
+        <div className="sidebar w-full md:w-1/5 md:h-full md:fixed md:right-0">
           <Sidebar />
         </div>
       </div>

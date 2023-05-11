@@ -18,7 +18,7 @@ const Sidebar = () => {
     };
 
     return (
-        <div className=" overflow-scroll sidebar bg-slate-100 self-center min-h-screen h-full border">
+        <div className="sidebar overflow-y-scroll bg-slate-100 self-center min-h-screen h-full border">
             <div className='bg-white border border-slate-200 rounded m-3'>
                 <div className='flex flex-col justify-between p-2'>
                     <div>
@@ -48,6 +48,7 @@ const Sidebar = () => {
                         <p className="text-xs text-muted">Total Sessions</p>
                         <p>456</p>
                     </div>
+                    <hr />
                     <Chart
                         chartType="SteppedAreaChart"
                         width="100%"
@@ -75,6 +76,7 @@ const Sidebar = () => {
                         <p className="text-xs text-muted">Customer Rate</p>
                         <p>5.43%</p>
                     </div>
+                    <hr />
                     <Chart
                         chartType="SteppedAreaChart"
                         width="100%"
@@ -98,11 +100,12 @@ const Sidebar = () => {
             </div>
 
             <div className='bg-white border border-slate-200 rounded m-3'>
-                <div className='flex flex-row justify-between p-2'>
+                <div className='flex flex-col justify-between p-2'>
                     <div>
                         <p className="text-xs text-muted">Total Sales</p>
                         <p>$281.90</p>
                     </div>
+                    <hr />
                     <Chart
                         chartType="SteppedAreaChart"
                         width="100%"
