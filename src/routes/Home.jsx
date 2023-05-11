@@ -1,4 +1,5 @@
 import React from 'react'
+import { Chart } from 'react-google-charts';
 import { AiOutlineStock } from 'react-icons/ai';
 import { BiMoviePlay } from 'react-icons/bi';
 import { CiMoneyBill, CiMoneyCheck1 } from 'react-icons/ci';
@@ -6,108 +7,28 @@ import { MdAttachMoney, MdMoneyOff, MdVpnLock } from 'react-icons/md';
 import { FiArrowRight } from 'react-icons/fi';
 import { FaGooglePlay, FaShieldAlt } from 'react-icons/fa';
 import { FcMultipleCameras, FcGoogle } from 'react-icons/fc';
-import { Bar, Line, Doughnut } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  ArcElement,
-  BarElement,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-
-ChartJS.register(
-  ArcElement,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
 
 
 const Home = () => {
-  const data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
-      {
-        // label: "Sales",
-        data: [65, 59, 80, 81, 56, 55, 40],
-        backgroundColor: "#FFFFFF",
-        borderColor: "#FFFFFF",
-        borderWidth: 1,
-        width: 1
-      },
-    ],
-  };
 
-  const options = {
-    // scales: {
-    //   yAxes: [
-    //     {
-    //       ticks: {
-    //         beginAtZero: true,
-    //         display: false, // hide the y-axis labels
-    //       },
-    //     },
-    //   ],
-    //   xAxes: [
-    //     {
-    //       ticks: {
-    //         display: false, // hide the x-axis labels
-    //       },
-    //     },
-    //   ],
-    // },
-    responsive: true,
-    plugins: {
-      // legend: {
-      //   position: 'top',
-      // },
-      // title: {
-      //   display: true,
-      //   text: 'Chart.js Bar Chart',
-      // },
-    },
-  };
+  const doughnutData = [
+    ["Task", "Hours per Day"],
+    ["Work", 11],
+    ["Eat", 2],
+    ["Commute", 2],
+    ["Watch TV", 2],
+    ["Sleep", 7], // CSS-style declaration
+  ];
 
-  const doughnutData = {
-    // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [
-      {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-        ],
-        borderWidth: 1,
-      },
-    ],
+  const doughnutOptions = {
+    title: "My Daily Activities",
+    pieHole: 0.4,
+    is3D: false,
   };
 
 
   return (
-    <div className="home w-[100%] md:grid-cols-2">
+    <div className="home w-[99%] md:grid-cols-2 p-4">
       <div className="price-cards flex flex-col items-center justify-around gap-4 my-3 md:grid-cols-4 md:flex-row">
         <div className="price-card-1 flex w-100 p-2 rounded transition duration-400 md:w-fit group hover:bg-orange-500 hover:cursor-pointer">
           <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
@@ -272,7 +193,7 @@ const Home = () => {
           </div>
           <br />
           <div className="bar-chart">
-            <Bar data={data} options={options} />
+            {/* <Bar data={barData} options={options} /> */}
           </div>
         </div>
 
@@ -302,7 +223,7 @@ const Home = () => {
 
         <div className='line-chart-container bg-orange-500 rounded p-4 md:row-span-1  md:row-start-4 md:row-end-5'>
           <div className="line-chart">
-            <Line data={data} options={options} />
+            {/* <Line data={lineData} options={options} /> */}
           </div>
         </div>
 
@@ -315,10 +236,17 @@ const Home = () => {
           </div>
 
           <div className="messenger bg-blue-500 rounded p-4">
-            <div className='flex flex-col text-white'>
-              <Doughnut data={doughnutData} />
+            {/* <div className='flex flex-col text-white'> */}
+              <Chart
+              className='flex flex-col text-white bg-blue-500 rounded'
+                chartType="PieChart"
+                width="100%"
+                height="100%"
+                data={doughnutData}
+                options={doughnutOptions}
+              />
               <p className='text-center'>35%</p>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>

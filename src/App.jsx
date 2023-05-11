@@ -16,7 +16,7 @@ function App() {
           <Sidenav />
         </div>
 
-        <div className="w-1/1 md:w-4/5 lg:w-3/5 outlet">
+        <div className="w-1/1 md:w-4/5 lg:w-3/5 p-0 m-0 outlet">
           <Outlet />
         </div>
 

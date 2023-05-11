@@ -1,108 +1,63 @@
-import React from 'react'
-import { Bar, Line } from "react-chartjs-2";
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
+import React from 'react';
+import { Chart } from "react-google-charts";
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-);
 
 const Sidebar = () => {
-    const data = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [
-            {
-                // label: "Sales",
-                data: [65, 59, 80, 81, 56, 55, 40],
-                backgroundColor: "#000000",
-                borderColor: "#FFFFFF",
-                borderWidth: 1
-            },
-        ],
-    };
+
+    const data = [
+        ["Director (Year)", "Rotten Tomatoes", "IMDB"],
+        ["Alfred Hitchcock (1935)", 8.4, 7.9],
+        ["Ralph Thomas (1959)", 6.9, 6.5],
+        ["Don Sharp (1978)", 6.5, 6.4],
+        ["James Hawes (2008)", 4.4, 6.2],
+    ];
 
     const options = {
-        // scales: {
-        //     yAxes: [
-        //         {
-        //             ticks: {
-        //                 beginAtZero: true,
-        //                 display: false, // hide the y-axis labels
-        //             },
-        //         },
-        //     ],
-        //     xAxes: [
-        //         {
-        //             ticks: {
-        //                 display: false, // hide the x-axis labels
-        //             },
-        //         },
-        //     ],
-        // },
-        responsive: true,
-        plugins: {
-            // legend: {
-            //   position: 'top',
-            // },
-            // title: {
-            //   display: true,
-            //   text: 'Chart.js Bar Chart',
-            // },
-        },
+        title: "The decline of 'The 39 Steps'",
+        vAxis: { title: "Accumulated Rating" },
+        isStacked: true,
     };
 
     return (
-        <div className="sidebar bg-slate-100 self-center min-h-screen h-full border">
+        <div className=" overflow-scroll sidebar bg-slate-100 self-center min-h-screen h-full border">
             <div className='bg-white border border-slate-200 rounded m-3'>
-                <div className='flex flex-row justify-between p-2'>
+                <div className='flex flex-col justify-between p-2'>
                     <div>
                         <p className="text-xs text-muted">Total Sales</p>
                         <p>$281.90</p>
                     </div>
-                    <div className='border'>
-                        {/* <Line data={data} options={options} /> */}
-                    </div>
-
+                    <hr />
+                    <Chart
+                        chartType="SteppedAreaChart"
+                        width="100%"
+                        height="30vh"
+                        data={data}
+                        options={options}
+                        legendToggle
+                    />
                 </div>
-
                 <hr />
                 <div className='flex justify-between p-2'>
                     <p className='text-xs'>6 other orders</p>
                     <p className='text-xs text-bold'>View Report</p>
                 </div>
-
-                <div>
-
-                </div>
             </div>
+
             <div className='bg-white border border-slate-200 rounded m-3'>
-                <div className='flex flex-row justify-between p-2'>
+                <div className='flex flex-col justify-between p-2'>
                     <div>
                         <p className="text-xs text-muted">Total Sessions</p>
                         <p>456</p>
                     </div>
-                    <div className='border'>
-                        {/* <Line data={data} options={options} /> */}
-                    </div>
-
+                    <Chart
+                        chartType="SteppedAreaChart"
+                        width="100%"
+                        height="30vh"
+                        data={data}
+                        options={options}
+                        legendToggle
+                    />
                 </div>
-
                 <hr />
                 <div className='flex justify-between p-2'>
                     <p className="text-xs text-bold">Live</p>
@@ -114,18 +69,22 @@ const Sidebar = () => {
 
                 </div>
             </div>
+
             <div className='bg-white border border-slate-200 rounded m-3'>
-                <div className='flex flex-row justify-between p-2'>
+                <div className='flex flex-col justify-between p-2'>
                     <div>
                         <p className="text-xs text-muted">Customer Rate</p>
                         <p>5.43%</p>
                     </div>
-                    <div className='border'>
-                        {/* <Line data={data} options={options} /> */}
-                    </div>
-
+                    <Chart
+                        chartType="SteppedAreaChart"
+                        width="100%"
+                        height="30vh"
+                        data={data}
+                        options={options}
+                        legendToggle
+                    />
                 </div>
-
                 <hr />
                 <div className='flex justify-between p-2'>
                     <div className='flex text-xs'>
@@ -137,31 +96,27 @@ const Sidebar = () => {
                         <span>Returning</span>
                     </div>
                 </div>
-
-                <div>
-
-                </div>
             </div>
+
             <div className='bg-white border border-slate-200 rounded m-3'>
                 <div className='flex flex-row justify-between p-2'>
                     <div>
                         <p className="text-xs text-muted">Total Sales</p>
                         <p>$281.90</p>
                     </div>
-                    <div className='border'>
-                        {/* <Line data={data} options={options} /> */}
-                    </div>
-
+                    <Chart
+                        chartType="SteppedAreaChart"
+                        width="100%"
+                        height="30vh"
+                        data={data}
+                        options={options}
+                        legendToggle
+                    />
                 </div>
-
                 <hr />
                 <div className='flex justify-between p-2'>
                     <p className='text-xs'>6 other orders</p>
                     <p className='text-xs text-bold'>View Report</p>
-                </div>
-
-                <div>
-
                 </div>
             </div>
         </div>
