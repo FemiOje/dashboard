@@ -9,7 +9,7 @@ import { FaGooglePlay, FaShieldAlt } from 'react-icons/fa';
 import { FcMultipleCameras, FcGoogle } from 'react-icons/fc';
 
 import { Chart } from 'react-google-charts';
-import { doughnutChartData, doughnutChartOptions } from '../data/chartData';
+import { doughnutChartData, doughnutChartOptions, lineChart2Data, lineChart2Options } from '../data/chartData';
 
 
 const Home = () => {
@@ -102,7 +102,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="transactions h-fit rounded bg-white p-4 duration-300 md:row-span-3 border-2 hover:bg-gray-300">
+        <div className="transactions h-fit rounded bg-white p-4 duration-300 md:row-span-3 border hover:bg-gray-100">
           <div className='flex flex-row'>
             <h3 className='font-bold self-center'>Transactions</h3>
             <div className="bg-slate-500 self-center text-white rounded-full p-1 ml-auto">
@@ -114,7 +114,7 @@ const Home = () => {
 
           <div className='text-sm'>
             <div className='flex flex-row p-2 group rounded duration-500 hover:bg-slate-900 hover:cursor-pointer'>
-              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mr-auto group-hover:text-slate-800'>
+              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <FaGooglePlay />
               </div>
               <div className="">
@@ -125,7 +125,7 @@ const Home = () => {
             </div>
 
             <div className='flex flex-row p-2 group rounded duration-500 hover:bg-slate-900 hover:cursor-pointer'>
-              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mr-auto group-hover:text-slate-800'>
+              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <AiOutlineStock />
               </div>
               <div className="">
@@ -136,7 +136,7 @@ const Home = () => {
             </div>
 
             <div className='flex flex-row p-2 group rounded duration-500 hover:bg-slate-900 hover:cursor-pointer'>
-              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mr-auto group-hover:text-slate-800'>
+              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <MdVpnLock />
               </div>
               <div className="">
@@ -147,7 +147,7 @@ const Home = () => {
             </div>
 
             <div className='flex flex-row p-2 group rounded duration-500 hover:bg-slate-900 hover:cursor-pointer'>
-              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mr-auto group-hover:text-slate-800'>
+              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <FaShieldAlt />
               </div>
               <div className="">
@@ -158,7 +158,7 @@ const Home = () => {
             </div>
 
             <div className='flex flex-row p-2 group rounded duration-500 hover:bg-slate-900 hover:cursor-pointer'>
-              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mr-auto group-hover:text-slate-800'>
+              <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <BiMoviePlay />
               </div>
               <div className="">
@@ -170,17 +170,30 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
-
-        </div>
-        <div className='transactions-chart bg-purple-800 text-white rounded p-4 md:row-start-4 md:row-end-6'>
+      
+        <div className='transactions-chart bg-purple-800 text-white rounded p-1 md:row-start-4 md:row-end-6'>
           <div className='flex flex-row'>
             <h4 className='mr-auto font-semibold'>Transactions</h4>
             <p className='ml-auto'>$2554</p>
           </div>
           <br />
           <div className="bar-chart">
-            {/* <Bar data={barData} options={options} /> */}
+            <Chart
+              chartType="LineChart"
+              width="100%"
+              height="100%"
+              className='bg-transparent'
+              data={lineChart2Data}
+              options={lineChart2Options}
+            />
+            <Chart
+              chartType="LineChart"
+              width="100%"
+              height="100%"
+              className='bg-transparent'
+              data={lineChart2Data}
+              options={lineChart2Options}
+            />
           </div>
         </div>
 
@@ -210,7 +223,13 @@ const Home = () => {
 
         <div className='line-chart-container bg-orange-500 rounded p-4 md:row-span-1  md:row-start-4 md:row-end-5'>
           <div className="line-chart">
-            {/* <Line data={lineData} options={options} /> */}
+            <Chart
+              chartType="LineChart"
+              width="100%"
+              height="100%"
+              data={lineChart2Data}
+              options={lineChart2Options}
+            />
           </div>
         </div>
 
@@ -222,17 +241,17 @@ const Home = () => {
             <p className="text-lg text-white py-2">$568</p>
           </div>
 
-          <div className="messenger bg-blue-500 rounded p-4">
+          <div className="messenger bg-blue-500 rounded p-1">
             {/* <div className='flex flex-col text-white'> */}
-              <Chart
-              className='flex flex-col text-white bg-blue-500 rounded'
-                chartType="PieChart"
-                width="100%"
-                height="100%"
-                data={doughnutChartData}
-                options={doughnutChartOptions}
-              />
-              <p className='text-center'>35%</p>
+            <Chart
+              className=' text-white  rounded'
+              chartType="PieChart"
+              width="100%"
+              height="100%"
+              data={doughnutChartData}
+              options={doughnutChartOptions}
+            />
+            <p className='text-center'>35%</p>
             {/* </div> */}
           </div>
         </div>

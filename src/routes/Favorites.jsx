@@ -15,7 +15,7 @@ import { FiTrendingUp } from 'react-icons/fi'
 import { FiTrendingDown } from 'react-icons/fi'
 
 import { tableData } from '../data/tableData';
-import { lineChartData, lineChartOptions } from '../data/chartData'
+import { lineChart3Data, lineChart3Options } from '../data/chartData'
 
 const Favorites = () => {
   // const [tableData, setTableData] = useState([])
@@ -125,8 +125,8 @@ const Favorites = () => {
             chartType="LineChart"
             width="100%"
             height="100%"
-            data={lineChartData}
-            options={lineChartOptions}
+            data={lineChart3Data}
+            options={lineChart3Options}
           />
         </div>
       </div>
