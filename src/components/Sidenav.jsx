@@ -8,8 +8,8 @@ import { CiShop } from 'react-icons/ci';
 const Sidenav = () => {
     return (
         <aside className="sidenav bg-slate-100 relative flex flex-col bg-white border-r border-gray-100">
-            <div className="sidenav-items text-sm font-medium">
-                <NavLink to={"/home"}>
+            <div className="sidenav-items font-medium">
+                <NavLink to={"/"}>
                     <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
                         <RxHome className='self-center mr-6' />
                         <p>Home</p>

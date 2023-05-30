@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -14,31 +14,28 @@ import { FiArrowDownCircle } from 'react-icons/fi'
 import { FiTrendingUp } from 'react-icons/fi'
 import { FiTrendingDown } from 'react-icons/fi'
 
+import { tableData } from '../data/tableData';
+import { lineChartData, lineChartOptions } from '../data/chartData'
+
 const Favorites = () => {
+  // const [tableData, setTableData] = useState([])
 
-  const data = [
-    ["x", "dogs", "cats"],
-    [0, 0, 0],
-    [1, 10, 5],
-    [2, 23, 15],
-    [3, 17, 9],
-    [4, 18, 10],
-    [5, 9, 5],
-    [6, 11, 3],
-    [7, 27, 19],
-  ];
 
-  const options = {
-    hAxis: {
-      title: "Time",
-    },
-    vAxis: {
-      title: "Popularity",
-    },
-    series: {
-      1: { curveType: "function" },
-    },
-  };
+  // useEffect(() => {
+  //   fetch('https://www.googleapis.com')
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data);
+  //       (setTableData(data))
+  //     }
+  //     )
+
+  //   return () => {
+  //     setTableData([])
+  //   }
+  // }, [tableData])
+
+
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -60,45 +57,6 @@ const Favorites = () => {
     },
   }));
 
-
-
-  const rows = [
-    {
-      'name': 'Frozen yoghurt',
-      'calories': 159,
-      'fat': 6.0,
-      'carbs': 24,
-      'protein': 4.0
-    },
-    {
-      'name': 'Ice cream sandwich',
-      'calories': 237,
-      'fat': 9.0,
-      'carbs': 37,
-      'protein': 4.3
-    },
-    {
-      'name': 'Eclair',
-      'calories': 262,
-      'fat': 16.0,
-      'carbs': 24,
-      'protein': 6.0
-    },
-    {
-      'name': 'Cupcake',
-      'calories': 305,
-      'fat': 3.7,
-      'carbs': 67,
-      'protein': 4.3
-    },
-    {
-      'name': 'Gingerbread',
-      'calories': 356,
-      'fat': 16.0,
-      'carbs': 49,
-      'protein': 3.9
-    },
-  ];
 
   return (
     <div className='favorites min-h-screen bg-slate-100'>
@@ -167,14 +125,14 @@ const Favorites = () => {
             chartType="LineChart"
             width="100%"
             height="100%"
-            data={data}
-            options={options}
+            data={lineChartData}
+            options={lineChartOptions}
           />
         </div>
       </div>
 
       <div className='bottom'>
-        <div className="employee-summary-table bg-white m-2 p-4 rounded">
+        <div className="employee-summary-table bg-white m-2 rounded">
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 700 }} aria-label="customized table" className='overflow-x-scroll'>
               <TableHead>
@@ -187,7 +145,7 @@ const Favorites = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map((row) => (
+                {tableData.map((row) => (
                   <StyledTableRow key={row.name}>
                     <StyledTableCell component="th" scope="row">
                       {row.name}

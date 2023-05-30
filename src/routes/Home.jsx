@@ -1,5 +1,5 @@
 import React from 'react'
-import { Chart } from 'react-google-charts';
+
 import { AiOutlineStock } from 'react-icons/ai';
 import { BiMoviePlay } from 'react-icons/bi';
 import { CiMoneyBill, CiMoneyCheck1 } from 'react-icons/ci';
@@ -8,24 +8,11 @@ import { FiArrowRight } from 'react-icons/fi';
 import { FaGooglePlay, FaShieldAlt } from 'react-icons/fa';
 import { FcMultipleCameras, FcGoogle } from 'react-icons/fc';
 
+import { Chart } from 'react-google-charts';
+import { doughnutChartData, doughnutChartOptions } from '../data/chartData';
+
 
 const Home = () => {
-
-  const doughnutData = [
-    ["Task", "Hours per Day"],
-    ["Work", 11],
-    ["Eat", 2],
-    ["Commute", 2],
-    ["Watch TV", 2],
-    ["Sleep", 7], // CSS-style declaration
-  ];
-
-  const doughnutOptions = {
-    title: "My Daily Activities",
-    pieHole: 0.4,
-    is3D: false,
-  };
-
 
   return (
     <div className="home w-[99%] md:grid-cols-2 p-4">
@@ -242,8 +229,8 @@ const Home = () => {
                 chartType="PieChart"
                 width="100%"
                 height="100%"
-                data={doughnutData}
-                options={doughnutOptions}
+                data={doughnutChartData}
+                options={doughnutChartOptions}
               />
               <p className='text-center'>35%</p>
             {/* </div> */}
