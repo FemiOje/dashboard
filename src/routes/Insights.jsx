@@ -70,19 +70,6 @@ const Insights = () => {
         <div className='flex flex-col gap-4'>
           <div className='map bg-white rounded-lg shadow-lg m-3 p-4 md:row-start-1 md:row-end-3 md:row-span-2'>
             <Chart
-              chartEvents={[
-                {
-                  eventName: "select",
-                  callback: ({ chartWrapper }) => {
-                    const chart = chartWrapper.getChart();
-                    const selection = chart.getSelection();
-                    // console.log("Selection:", selection);
-                    if (selection.length === 0) return;
-                    const region = data[selection[0].row + 1];
-                    console.log("Selected : " + region);
-                  },
-                },
-              ]}
               chartType="GeoChart"
               width="100%"
               height="100%"
@@ -92,13 +79,13 @@ const Insights = () => {
 
 
           <div className='m-2 md:flex md:flex-row md:gap-5 md:row-start-3 md:row-end-4'>
-            <div className='rounded-lg shadow-lg bg-white text-center cursor-pointer p-5'>
+            <div className='rounded-lg shadow-lg bg-white text-center cursor-pointer p-5 my-2'>
               <small className='text-gray-400 text-xs font-semibold'>Sales: Aug 2027</small>
               <h3>$5.73K</h3>
               <small className='text-gray-400 text-xs font-semibold'>Jul 2027: $10.35K</small>
             </div>
 
-            <div className='rounded-lg shadow-lg bg-white text-center cursor-pointer p-5'>
+            <div className='rounded-lg shadow-lg bg-white text-center cursor-pointer p-5 my-2'>
               <small className='text-gray-400 text-xs font-semibold'>Average Order Value: Aug 2027</small>
               <h3>$34</h3>
               <small className='text-gray-400 text-xs font-semibold'>Jul 2027: $0.23K</small>
