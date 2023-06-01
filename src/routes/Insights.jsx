@@ -6,17 +6,23 @@ const Insights = () => {
   return (
     <div className='bg-slate-100 min-h-screen flex flex-col'>
       <div className='p-2 m-2 flex flex-col md:grid md:grid-rows-1 md:grid-cols-3 md:gap-3'>
-        <div className='bg-white rounded-lg p-4 shadow-lg my-2'>Col 1</div>
-        <div className='bg-white rounded-lg p-4 shadow-lg my-2'>Col 2</div>
-        <div className='bg-white rounded-lg p-4 shadow-lg my-2'>Col 3</div>
+        <div className='bg-white text-center rounded-lg p-4 shadow-lg my-2'>
+          <h3 className='font-bold text-xl'>73M+</h3>
+          <p className="text-semibold">Developers</p>
+        </div>
+        <div className='bg-white text-center rounded-lg p-4 shadow-lg my-2'>
+          <h3 className='font-bold text-xl'>90+</h3>
+          <p className="text-semibold">Top Forbes Companies</p>
+        </div>
+        <div className='bg-white text-center rounded-lg p-4 shadow-lg my-2'>
+          <h3 className='font-bold text-xl'>1000+</h3>
+          <p className="text-semibold">Open Source Projects</p>
+        </div>
       </div>
 
       <div className='flex flex-col md:grid md:grid-cols-2'>
-
         <div className='flex flex-col md:grid md:grid-rows-auto'>
-
           <div className='m-2 md:flex md:gap-5 md:row-start-1 md:row-end-2'>
-
             <div className='rounded-lg bg-white shadow-lg text-center cursor-pointer p-5 my-2'>
               <small className='text-gray-400 text-xs font-semibold'>Sales: Aug 2027</small>
               <h3>$5.73K</h3>
@@ -77,7 +83,6 @@ const Insights = () => {
             />
           </div>
 
-
           <div className='m-2 md:flex md:flex-row md:gap-5 md:row-start-3 md:row-end-4'>
             <div className='rounded-lg shadow-lg bg-white text-center cursor-pointer p-5 my-2'>
               <small className='text-gray-400 text-xs font-semibold'>Sales: Aug 2027</small>
@@ -95,9 +100,21 @@ const Insights = () => {
       </div>
 
       <div className='p-2 m-2 flex flex-col md:grid md:grid-rows-1 md:grid-cols-3 md:gap-3'>
-        <div className='bg-white rounded-lg p-4 shadow-lg my-2'>Col 1</div>
-        <div className='bg-white rounded-lg p-4 shadow-lg my-2'>Col 2</div>
-        <div className='bg-white rounded-lg p-4 shadow-lg my-2'>Col 3</div>
+        <div className='bg-white flex flex-row rounded-lg justify-between p-4 shadow-lg my-2'>
+          <p className="text-sm">Facebook</p>
+          <p className="text-sm">1.436</p>
+          <p className="text-sm text-green-500">+5.8%</p>
+        </div>
+        <div className='bg-white flex flex-row rounded-lg justify-between p-4 shadow-lg my-2'>
+          <p className="text-sm">Facebook</p>
+          <p className="text-sm">1.436</p>
+          <p className="text-sm text-green-500">+5.8%</p>
+        </div>
+        <div className='bg-white flex flex-row rounded-lg justify-between p-4 shadow-lg my-2'>
+          <p className="text-sm">Facebook</p>
+          <p className="text-sm">1.436</p>
+          <p className="text-sm text-green-500">+5.8%</p>
+        </div>
       </div>
 
     </div>

@@ -124,7 +124,7 @@ const Home = () => {
               <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <FaGooglePlay />
               </div>
-              <div className="">
+              <div>
                 <p className='group-hover:text-white'>Google Play Buyers</p>
                 <p className='text-xs text-gray-500 font-bold'>25 Oct 2025</p>
               </div>
@@ -135,7 +135,7 @@ const Home = () => {
               <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <AiOutlineStock />
               </div>
-              <div className="">
+              <div>
                 <p className='group-hover:text-white'>Buy Apple Stocks</p>
                 <p className='text-xs text-gray-500 font-bold'>25 Oct 2025</p>
               </div>
@@ -146,7 +146,7 @@ const Home = () => {
               <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <MdVpnLock />
               </div>
-              <div className="">
+              <div>
                 <p className='group-hover:text-white'>VPN Buy Services</p>
                 <p className='text-xs text-gray-500 font-bold'>25 Oct 2025</p>
               </div>
@@ -157,7 +157,7 @@ const Home = () => {
               <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <FaShieldAlt />
               </div>
-              <div className="">
+              <div>
                 <p className='group-hover:text-white'>VPN Buy Services</p>
                 <p className='text-xs text-gray-500 font-bold'>25 Oct 2025</p>
               </div>
@@ -168,7 +168,7 @@ const Home = () => {
               <div className='bg-white self-center text-slate-500 shadow-md rounded-full p-3 mx-2 group-hover:text-slate-800'>
                 <BiMoviePlay />
               </div>
-              <div className="">
+              <div>
                 <p className='group-hover:text-white'>Service Rental</p>
                 <p className='text-xs text-gray-500 font-bold'>25 Oct 2025</p>
               </div>

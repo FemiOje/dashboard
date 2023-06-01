@@ -7,8 +7,8 @@ const ComingSoon = () => {
         <>
             <Navbar />
             <div className='pt-[20%] text-center'>
-                <p className='text-2xl'>Coming Soon... Watch this space</p>
-                <Link to={'/'}>Go Back To Home</Link>
+                <p className='text-2xl mb-5'>Coming Soon... Watch this space</p>
+                <Link to={'/'} className='text-blue-700 font-semibold'>Go Back To Homepage</Link>
             </div>
         </>
     )
