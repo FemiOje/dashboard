@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { RxHome } from 'react-icons/rx';
 import { MdInsights, MdTravelExplore, MdOutlineFavorite } from 'react-icons/md';
-import { TbMessages } from 'react-icons/tb';
 import { CiShop } from 'react-icons/ci';
 
 
@@ -43,39 +42,39 @@ const Navbar = () => {
                                 </svg>)}
                     </div>
 
-                    <span className="brand--name self-center">
-                        <h3>Constructor</h3>
+                    <span className="brand-name self-center">
+                        <h3 className='font-semibold ml-5'>Femi's Dashboard</h3>
                     </span>
                 </div>
 
 
                 <div className="navbar--items flex flex-row m-auto">
-                    <a className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to ={'/'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>Dashboard</h3>
-                    </a>
+                    </Link>
 
-                    <a className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>About Us</h3>
-                    </a>
+                    </Link>
 
-                    <a className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>News</h3>
-                    </a>
+                    </Link>
 
-                    <a className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>User Policy</h3>
-                    </a>
+                    </Link>
 
-                    <a className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>Contacts</h3>
-                    </a>
+                    </Link>
                 </div>
 
 
                 <div className="search m-auto">
                     <input
                         type="search"
-                        className='border rounded-full p-1'
+                        className='border rounded-full px-5 py-1 outline-none'
                         name="search"
                         id="search"
                         placeholder='Search' />
@@ -84,7 +83,6 @@ const Navbar = () => {
                 <div className="flex flex-row ml-auto space-x-2">
                     <button className='align-middle rounded-full bg-blue-300 py-2 px-4 duration-300 hover:bg-blue-500 hover:shadow-outline'>C</button>
                     <p className='mx-1 my-auto align-middle text-sm'>Clayton Santos</p>
-                    {/* <button className='align-middle rounded-full bg-red-200  py-2 px-4 duration-300 hover:bg-red-500 hover:shadow-outline'>S</button> */}
                 </div>
             </nav>
 
@@ -101,7 +99,7 @@ const Navbar = () => {
                     <aside className='fixed z-20 bg-white h-full shadow duration-250 w-3/4'>
                         <nav className="bg-white">
                             <div className="sidenav-items">
-                                <NavLink to={"/home"} onClick={toggleDropdown}>
+                                <NavLink to={"/"} onClick={toggleDropdown}>
                                     <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
                                         <RxHome className='self-center mx-1' />
                                         <p>Home</p>
@@ -112,13 +110,6 @@ const Navbar = () => {
                                     <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
                                         <MdOutlineFavorite className='self-center mx-1' />
                                         <p>Favorites</p>
-                                    </div>
-                                </NavLink>
-
-                                <NavLink to={"/messages"} onClick={toggleDropdown}>
-                                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                                        <TbMessages className='self-center mx-1' />
-                                        <p>Messages</p>
                                     </div>
                                 </NavLink>
 

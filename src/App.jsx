@@ -12,11 +12,11 @@ function App() {
       </div>
 
       <div className="layout relative flex">
-        <div className="sidenav md:w-1/5 md:fixed md:top-[3.5rem]">
+        <div className="sidenav h-screen md:w-1/5 md:fixed md:top-[3.5rem]">
           <Sidenav />
         </div>
 
-        <div className="w-screen p-0 m-0 md:fixed md:overflow-y-scroll md:h-full md:left-[20%] md:w-4/5 lg:w-3/5">
+        <div className="bg-slate-100 w-screen p-0 m-0 md:fixed md:overflow-y-scroll md:h-[90%] md:left-[20%] md:w-4/5 lg:w-3/5">
           <Outlet />
         </div>
 

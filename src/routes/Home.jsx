@@ -9,7 +9,14 @@ import { FaGooglePlay, FaShieldAlt } from 'react-icons/fa';
 import { FcMultipleCameras, FcGoogle } from 'react-icons/fc';
 
 import { Chart } from 'react-google-charts';
-import { doughnutChartData, doughnutChartOptions, lineChart2Data, lineChart2Options } from '../data/chartData';
+import {
+  doughnutChartData,
+  doughnutChartOptions,
+  lineChartData,
+  lineChartOptions,
+  lineChart2Data,
+  lineChart2Options
+} from '../data/chartData';
 
 
 const Home = () => {
@@ -17,7 +24,7 @@ const Home = () => {
   return (
     <div className="home w-[99%] md:grid-cols-2 p-4">
       <div className="price-cards flex flex-col items-center justify-around gap-4 my-3 md:grid-cols-4 md:flex-row">
-        <div className="price-card-1 flex w-100 p-2 rounded transition duration-400 md:w-fit group hover:bg-orange-500 hover:cursor-pointer">
+        <div className="price-card-1 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 md:w-1/4 group hover:bg-orange-500 hover:cursor-pointer">
           <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
             <CiMoneyBill />
           </div>
@@ -28,7 +35,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="price-card-2 flex w-100 p-2 rounded transition duration-400 md:w-fit group hover:bg-slate-500 hover:cursor-pointer">
+        <div className="price-card-2 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 md:w-1/4 group hover:bg-slate-500 hover:cursor-pointer">
           <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
             <CiMoneyCheck1 />
           </div>
@@ -39,7 +46,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="price-card-3 flex w-100 p-2 rounded transition duration-400 md:w-fit group hover:bg-purple-500 hover:cursor-pointer">
+        <div className="price-card-3 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 md:w-1/4 group hover:bg-purple-500 hover:cursor-pointer">
           <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
             <MdAttachMoney />
           </div>
@@ -50,7 +57,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="price-card-4 flex w-100 p-2 transition duration-400 rounded md:w-fit group hover:bg-blue-500 hover:cursor-pointer">
+        <div className="price-card-4 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 rounded md:w-1/4 group hover:bg-blue-500 hover:cursor-pointer">
           <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
             <MdMoneyOff />
           </div>
@@ -64,7 +71,7 @@ const Home = () => {
 
 
       <div className="flex flex-col gap-2 md:flex-row md:grid md:grid-cols-2">
-        <div className="your-cards h-fit bg-slate-900 text-white p-5 rounded duration-300 cursor-pointer md:row-span-3 border-2 hover:bg-slate-800">
+        <div className="your-cards h-fit bg-slate-900 text-white p-5 rounded-xl shadow-lg duration-300 cursor-pointer md:row-span-3 border-2 hover:bg-slate-800">
           <div className='flex flex-row'>
             <h3 className='font-bold self-center'>Your Cards</h3>
             <div className="bg-slate-600 self-center text-white rounded-full p-1 ml-auto">
@@ -102,7 +109,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="transactions h-fit rounded bg-white p-4 duration-300 md:row-span-3 border hover:bg-gray-100">
+        <div className="transactions h-fit rounded-xl bg-white shadow-lg p-4 duration-300 md:row-span-3">
           <div className='flex flex-row'>
             <h3 className='font-bold self-center'>Transactions</h3>
             <div className="bg-slate-500 self-center text-white rounded-full p-1 ml-auto">
@@ -170,9 +177,9 @@ const Home = () => {
           </div>
         </div>
 
-      
-        <div className='transactions-chart bg-purple-800 text-white rounded p-1 md:row-start-4 md:row-end-6'>
-          <div className='flex flex-row'>
+
+        <div className='transactions-chart bg-white rounded-xl shadow-lg p-1 md:row-start-4 md:row-span-2'>
+          <div className='flex flex-row px-4 pt-5'>
             <h4 className='mr-auto font-semibold'>Transactions</h4>
             <p className='ml-auto'>$2554</p>
           </div>
@@ -183,45 +190,37 @@ const Home = () => {
               width="100%"
               height="100%"
               className='bg-transparent'
-              data={lineChart2Data}
-              options={lineChart2Options}
-            />
-            <Chart
-              chartType="LineChart"
-              width="100%"
-              height="100%"
-              className='bg-transparent'
-              data={lineChart2Data}
-              options={lineChart2Options}
+              data={lineChartData}
+              options={lineChartOptions}
             />
           </div>
         </div>
 
         <div className="frequent-payment-cards gap-3 md:grid md:grid-cols-3 md:row-span-1 md:row-start-6 md:row-end-7">
-          <div className="google-play p-2 rounded shadow-lg group transition duration-400 hover:cursor-pointer hover:bg-slate-800">
-            <button className='p-4 rounded-full shadow-md mb-6 group-hover:bg-white'>
+          <div className="google-play text-center bg-white p-2 my-2 rounded-xl shadow-lg group transition duration-400 hover:cursor-pointer hover:bg-slate-800">
+            <button className='p-4 rounded-full shadow-md group-hover:bg-white'>
               <FcGoogle />
             </button>
-            <p className="text-xs font-semibold group-hover:text-white">Google Play</p>
+            <p className="text-sm font-semibold group-hover:text-white">Google Play</p>
           </div>
 
-          <div className="vpn-buy-services p-2 rounded shadow-lg group transition duration-400 hover:cursor-pointer hover:bg-slate-800">
-            <button className='p-4 rounded-full shadow-md mb-6 group-hover:bg-white'>
+          <div className="vpn-buy-services text-center bg-white p-2 my-2 rounded-xl shadow-lg group transition duration-400 hover:cursor-pointer hover:bg-slate-800">
+            <button className='p-4 rounded-full shadow-md group-hover:bg-white'>
               <FaShieldAlt />
             </button>
-            <p className="text-xs font-semibold group-hover:text-white">VPN Buy Services</p>
+            <p className="text-sm font-semibold group-hover:text-white">VPN Buy Services</p>
           </div>
 
-          <div className="service-rental p-2 rounded shadow-lg group transition duration-400 hover:cursor-pointer hover:bg-slate-800">
-            <button className='p-4 rounded-full shadow-md mb-6 group-hover:bg-white'>
+          <div className="service-rental text-center bg-white p-2 my-2 rounded-xl shadow-lg group transition duration-400 hover:cursor-pointer hover:bg-slate-800">
+            <button className='p-4 rounded-full shadow-md group-hover:bg-white'>
               <FcMultipleCameras />
             </button>
-            <p className="text-xs font-semibold group-hover:text-white">Services Rental</p>
+            <p className="text-sm font-semibold group-hover:text-white">Services Rental</p>
           </div>
         </div>
 
 
-        <div className='line-chart-container bg-orange-500 rounded p-4 md:row-span-1  md:row-start-4 md:row-end-5'>
+        <div className='line-chart-container bg-white rounded-xl shadow-lg p-1 md:row-start-4 md:row-end-5'>
           <div className="line-chart">
             <Chart
               chartType="LineChart"
@@ -235,28 +234,23 @@ const Home = () => {
 
 
         <div className="apple-and-messenger-cards gap-2 md:grid md:grid-cols-2 md:row-start-5 md:row-end-7">
-          <div className="apple bg-orange-600 rounded p-4">
-            < FcGoogle />
-            <p className="text-lg text-white py-2">Apple iPhone</p>
+          <div className="apple bg-orange-600 rounded-xl shadow-lg p-4 my-3 text-center">
+            < FcGoogle className='m-auto mt-7' />
+            <p className="text-lg text-white py-2">Google Pixel</p>
             <p className="text-lg text-white py-2">$568</p>
           </div>
 
-          <div className="messenger bg-blue-500 rounded p-1">
-            {/* <div className='flex flex-col text-white'> */}
+          <div className="bg-white rounded-xl shadow-lg my-2 p-1">
             <Chart
-              className=' text-white  rounded'
               chartType="PieChart"
               width="100%"
               height="100%"
               data={doughnutChartData}
               options={doughnutChartOptions}
             />
-            <p className='text-center'>35%</p>
-            {/* </div> */}
           </div>
         </div>
       </div>
-
     </div>
   )
 }

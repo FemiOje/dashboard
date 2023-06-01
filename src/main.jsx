@@ -5,10 +5,10 @@ import './index.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './routes/Home';
 import Insights from './routes/Insights';
-import Messages from './routes/Messages';
 import Favorites from './routes/Favorites';
 import Explore from './routes/Explore';
 import Marketplace from './routes/Marketplace';
+import ComingSoon from './components/ComingSoon';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -18,11 +18,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/" element={<App />}>
             <Route default path="/" element={<Home />} />
             <Route path="insights" element={<Insights />} />
-            <Route path="messages" element={<Messages />} />
             <Route path="favorites" element={<Favorites />} />
             <Route path="explore" element={<Explore />} />
             <Route path="marketplace" element={<Marketplace />} />
           </Route>
+          
+          <Route path='/coming-soon' element={<ComingSoon />} />
         </Routes>
       </BrowserRouter>
   </React.StrictMode>,

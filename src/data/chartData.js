@@ -20,6 +20,7 @@ const lineChartOptions = {
     series: {
         1: { curveType: "function" },
     },
+    legend: "none",
 };
 
 const doughnutChartData = [
@@ -35,6 +36,7 @@ const doughnutChartOptions = {
     title: "",
     pieHole: 0.9,
     is3D: false,
+    legend: "none"
 };
 
 const steppedAreaChartData = [
@@ -50,7 +52,9 @@ const steppedAreaChartOptions = {
     hAxis: { title: "Name", viewWindow: { min: 0, max: 4 } },
     vAxis: { title: "Rating", viewWindow: { min: 0, max: 10 } },
     isStacked: true,
-    legend: "none"
+    legend: "none",
+    // legend: { position: "bottom" },
+
 
 };
 
@@ -78,12 +82,19 @@ const lineChart2Data = [
 ];
 
 const lineChart2Options = {
-    chart: {
-        title: "Box Office Earnings in First Two Weeks of Opening",
-        subtitle: "in millions of dollars (USD)",
-        hAxis: { title: "Week", viewWindow: { min: 0, max: 15 } },
-        vAxis: { title: "Rating", viewWindow: { min: 0, max: 10 } },
+    hAxis: {
+        title: "Week",
+        viewWindow: { min: 0, max: 15 }
     },
+    vAxis: {
+        title: "Ratings",
+        viewWindow: { min: 0, max: 90 }
+    },
+    // chart: {
+    //     hAxis: { title: "Week", viewWindow: { min: 0, max: 15 } },
+    //     vAxis: { title: "Rating", viewWindow: { min: 0, max: 10 } },
+    // },
+    legend: "none"
 };
 
 const lineChart3Data = [
@@ -92,13 +103,24 @@ const lineChart3Data = [
     ["2005", 1170, 460],
     ["2006", 660, 1120],
     ["2007", 1030, 540],
-  ];
-  
-  const lineChart3Options = {
+];
+
+const lineChart3Options = {
     title: "Company Performance",
     curveType: "function",
     legend: { position: "bottom" },
-  };
+};
+
+const CountryData = [
+    ["Country", "Popularity"],
+    ["Germany", 200],
+    ["United States", 300],
+    ["Brazil", 400],
+    ["Canada", 500],
+    ["France", 600],
+    ["RU", 700],
+    ["Nigeria", 400],
+];
 
 export {
     lineChartData,
@@ -110,5 +132,6 @@ export {
     doughnutChartData,
     doughnutChartOptions,
     steppedAreaChartData,
-    steppedAreaChartOptions
+    steppedAreaChartOptions,
+    CountryData
 }
