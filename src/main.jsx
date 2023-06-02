@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="marketplace" element={<Marketplace />} />
           <Route path="coming-soon" element={<ComingSoon />} />
         </Route>
-        <Route path='/*' element={<PageNotFound />} />
+        <Route path='*' element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
