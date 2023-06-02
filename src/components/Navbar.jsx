@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { RxHome } from 'react-icons/rx';
 import { MdInsights, MdTravelExplore, MdOutlineFavorite } from 'react-icons/md';
 import { CiShop } from 'react-icons/ci';
+import ClickAwayListener from 'react-click-away-listener';
 
 
 const Navbar = () => {
@@ -49,7 +50,7 @@ const Navbar = () => {
 
 
                 <div className="navbar--items flex flex-row m-auto">
-                    <Link to ={'/'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>Dashboard</h3>
                     </Link>
 
@@ -89,55 +90,58 @@ const Navbar = () => {
 
             {/* should appear from the side */}
             {isDropdownOpen &&
-                <motion.div
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -10 }}
-                    transition={{ duration: 0.4 }}
-                    className='z-20 relative'
-                >
-                    <aside className='fixed z-20 bg-white h-full shadow duration-250 w-3/4'>
-                        <nav className="bg-white">
-                            <div className="sidenav-items">
-                                <NavLink to={"/"} onClick={toggleDropdown}>
-                                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                                        <RxHome className='self-center mx-1' />
-                                        <p>Home</p>
-                                    </div>
-                                </NavLink>
+                <ClickAwayListener onClickAway={toggleDropdown}>
+                    <motion.div
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -10 }}
+                        transition={{ duration: 0.4 }}
+                        className='z-20 relative'
+                        role='presentation'
+                    >
+                        <aside className='fixed z-20 bg-white h-full shadow duration-250 w-3/4'>
+                            <nav className="bg-white">
+                                <div className="sidenav-items">
+                                    <NavLink to={"/"} onClick={toggleDropdown}>
+                                        <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                                            <RxHome className='self-center mx-1' />
+                                            <p>Home</p>
+                                        </div>
+                                    </NavLink>
 
-                                <NavLink to={"/favorites"} onClick={toggleDropdown}>
-                                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                                        <MdOutlineFavorite className='self-center mx-1' />
-                                        <p>Favorites</p>
-                                    </div>
-                                </NavLink>
+                                    <NavLink to={"/favorites"} onClick={toggleDropdown}>
+                                        <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                                            <MdOutlineFavorite className='self-center mx-1' />
+                                            <p>Favorites</p>
+                                        </div>
+                                    </NavLink>
 
-                                <NavLink to={"/insights"} onClick={toggleDropdown}>
-                                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                                        <MdInsights className='self-center mx-1' />
-                                        <p>Insights</p>
-                                    </div>
-                                </NavLink>
+                                    <NavLink to={"/insights"} onClick={toggleDropdown}>
+                                        <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                                            <MdInsights className='self-center mx-1' />
+                                            <p>Insights</p>
+                                        </div>
+                                    </NavLink>
 
-                                <NavLink to={"/explore"} onClick={toggleDropdown}>
-                                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                                        <MdTravelExplore className='self-center mx-1' />
-                                        <p>Explore</p>
-                                    </div>
-                                </NavLink>
+                                    <NavLink to={"/explore"} onClick={toggleDropdown}>
+                                        <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                                            <MdTravelExplore className='self-center mx-1' />
+                                            <p>Explore</p>
+                                        </div>
+                                    </NavLink>
 
-                                <NavLink to={"/marketplace"} onClick={toggleDropdown}>
-                                    <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
-                                        <CiShop className='self-center mx-1' />
-                                        <p>Marketplace</p>
-                                    </div>
-                                </NavLink>
+                                    <NavLink to={"/marketplace"} onClick={toggleDropdown}>
+                                        <div className="flex p-4 m-auto duration-200 cursor-pointer hover:bg-gray-300">
+                                            <CiShop className='self-center mx-1' />
+                                            <p>Marketplace</p>
+                                        </div>
+                                    </NavLink>
 
-                            </div>
-                        </nav>
-                    </aside>
-                </motion.div>
+                                </div>
+                            </nav>
+                        </aside>
+                    </motion.div>
+                </ClickAwayListener>
             }
         </div>
     )
