@@ -25,7 +25,7 @@ const Home = () => {
     <div className="home w-[99%] md:grid-cols-2 p-4">
       <div className="price-cards flex flex-col items-center justify-around gap-4 my-3 md:grid-cols-4 md:flex-row">
         <div className="price-card-1 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 md:w-1/4 group hover:bg-orange-500 hover:cursor-pointer">
-          <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
+          <div className="icon m-1 p-3 self-center rounded-full shadow-md bg-orange-500 text-white group-hover:bg-white group-hover:text-black">
             <CiMoneyBill />
           </div>
 
@@ -36,7 +36,7 @@ const Home = () => {
         </div>
 
         <div className="price-card-2 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 md:w-1/4 group hover:bg-slate-500 hover:cursor-pointer">
-          <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
+          <div className="icon m-1 p-3 self-center rounded-full shadow-md bg-slate-500 text-white group-hover:bg-white group-hover:text-black">
             <CiMoneyCheck1 />
           </div>
 
@@ -47,7 +47,7 @@ const Home = () => {
         </div>
 
         <div className="price-card-3 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 md:w-1/4 group hover:bg-purple-500 hover:cursor-pointer">
-          <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
+          <div className="icon m-1 p-3 self-center rounded-full bg-purple-500 text-white shadow-md group-hover:bg-white group-hover:text-black">
             <MdAttachMoney />
           </div>
 
@@ -58,7 +58,7 @@ const Home = () => {
         </div>
 
         <div className="price-card-4 flex bg-white shadow-lg w-full m-auto p-2 rounded-xl transition duration-400 rounded md:w-1/4 group hover:bg-blue-500 hover:cursor-pointer">
-          <div className="icon m-1 p-3 self-center rounded-full shadow-md group-hover:bg-white">
+          <div className="icon m-1 p-3 self-center rounded-full bg-blue-500 text-white shadow-md group-hover:bg-white group-hover:text-black">
             <MdMoneyOff />
           </div>
 
@@ -71,7 +71,7 @@ const Home = () => {
 
 
       <div className="flex flex-col gap-2 md:flex-row md:grid md:grid-cols-2">
-        <div className="your-cards h-fit bg-slate-900 text-white p-5 rounded-xl shadow-lg duration-300 cursor-pointer md:row-span-3 border-2 hover:bg-slate-800">
+        <div className="your-cards h-[55vh] bg-slate-900 text-white p-5 rounded-xl shadow-lg duration-300 cursor-pointer md:row-span-3 border-2 hover:bg-slate-800">
           <div className='flex flex-row'>
             <h3 className='font-bold self-center'>Your Cards</h3>
             <div className="bg-slate-600 self-center text-white rounded-full p-1 ml-auto">
@@ -109,7 +109,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="transactions h-fit rounded-xl bg-white shadow-lg p-4 duration-300 md:row-span-3">
+        <div className="transactions h-[55vh] rounded-xl bg-white shadow-lg p-4 duration-300 md:row-span-3">
           <div className='flex flex-row'>
             <h3 className='font-bold self-center'>Transactions</h3>
             <div className="bg-slate-500 self-center text-white rounded-full p-1 ml-auto">
