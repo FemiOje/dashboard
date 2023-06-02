@@ -1,8 +1,9 @@
 import React from 'react'
+import ComingSoon from '../components/ComingSoon'
 
 const Explore = () => {
   return (
-    <div>Explore</div>
+    <ComingSoon />
   )
 }
 

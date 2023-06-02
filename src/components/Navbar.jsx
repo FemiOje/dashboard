@@ -50,23 +50,23 @@ const Navbar = () => {
 
 
                 <div className="navbar--items flex flex-row m-auto">
-                    <Link to={'/'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/'} className='hidden lg:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>Dashboard</h3>
                     </Link>
 
-                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden lg:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>About Us</h3>
                     </Link>
 
-                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden lg:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>News</h3>
                     </Link>
 
-                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden lg:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>User Policy</h3>
                     </Link>
 
-                    <Link to={'/coming-soon'} className='hidden md:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
+                    <Link to={'/coming-soon'} className='hidden lg:block text-black text-sm font-medium no-underline mx-3 my-0 duration-200 hover:cursor-pointer hover:text-gray-500'>
                         <h3>Contacts</h3>
                     </Link>
                 </div>
