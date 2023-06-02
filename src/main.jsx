@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="favorites" element={<Favorites />} />
           <Route path="explore" element={<Explore />} />
           <Route path="marketplace" element={<Marketplace />} />
-          <Route path='/coming-soon' element={<ComingSoon />} />
+          <Route path="coming-soon" element={<ComingSoon />} />
         </Route>
         <Route path='/*' element={<PageNotFound />} />
       </Routes>
