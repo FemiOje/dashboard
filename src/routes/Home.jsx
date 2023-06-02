@@ -71,7 +71,7 @@ const Home = () => {
 
 
       <div className="flex flex-col gap-2 md:flex-row md:grid md:grid-cols-2">
-        <div className="your-cards h-[55vh] bg-slate-900 text-white p-5 rounded-xl shadow-lg duration-300 cursor-pointer md:row-span-3 border-2 hover:bg-slate-800">
+        <div className="your-cards h-[70vh] md:h-[55vh] bg-slate-900 text-white p-5 rounded-xl shadow-lg duration-300 cursor-pointer md:row-span-3 border-2 hover:bg-slate-800">
           <div className='flex flex-row'>
             <h3 className='font-bold self-center'>Your Cards</h3>
             <div className="bg-slate-600 self-center text-white rounded-full p-1 ml-auto">
@@ -109,7 +109,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="transactions h-[55vh] rounded-xl bg-white shadow-lg p-4 duration-300 md:row-span-3">
+        <div className="transactions h-[70vh] md:h-[55vh] rounded-xl bg-white shadow-lg p-4 duration-300 md:row-span-3">
           <div className='flex flex-row'>
             <h3 className='font-bold self-center'>Transactions</h3>
             <div className="bg-slate-500 self-center text-white rounded-full p-1 ml-auto">
